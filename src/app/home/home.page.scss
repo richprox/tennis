@@ -1,11 +1,15 @@
+@import '~swiper/scss';
+@import '~@ionic/angular/css/ionic-swiper';
+
 #container {
   text-align: center;
-
+  background-color: #3a7be0;
   position: absolute;
   left: 0;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  display: inline-flex;
 }
 
 #container strong {
@@ -17,7 +21,7 @@
   font-size: 16px;
   line-height: 22px;
 
-  color: #8c8c8c;
+  color: #a21e1e;
 
   margin: 0;
 }
@@ -25,3 +29,13 @@
 #container a {
   text-decoration: none;
 }
+ion-toolbar {
+  --background: #a24bc4;
+  --color: white;
+  --min-height: 60px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+}
+
+/* iOS places the subtitle above the title */
+

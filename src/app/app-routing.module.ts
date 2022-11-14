@@ -21,15 +21,22 @@ const routes: Routes = [
       import('./home/home.module').then( m => m.HomePageModule),
     ...canActivate(redirectUnauthorizedToLogin)
   },
-  {
-    path: 'tennis',
-    loadChildren: () => import('./tennis/tennis.module').then( m => m.TennisPageModule)
-  },
   // {
-  //   path: '',
-  //   redirectTo: 'tennis',
-  //   pathMatch: 'full'
+  //   path: 'tennis',
+  //   loadChildren: () => import('./tennis/tennis.module').then( m => m.TennisPageModule)
   // },
+  {
+    path: 'bookings',
+    loadChildren: () => import('./bookings/bookings.module').then(m => m.BookingsPageModule)
+  },
+  {
+    path: 'users',
+    loadChildren: () => import('./users/users.module').then( m => m.UsersPageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
+  }
 ];
 
 @NgModule({

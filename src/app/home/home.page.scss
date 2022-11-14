@@ -37,5 +37,33 @@ ion-toolbar {
   --padding-bottom: 20px;
 }
 
+ion-tab-bar{
+  --background: #361942;
+}
+
+ion-icon{
+  --background: #a24bc4;
+  --color: white;
+}
+
+
+.fullscreen-bg {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+  width:100%;
+  margin:auto;
+}
+.center {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute !important;
+  text-align: center;
+  width:100%;
+}
+
 /* iOS places the subtitle above the title */
 

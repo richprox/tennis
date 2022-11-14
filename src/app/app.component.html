@@ -1,3 +1,57 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <div style="display: flex; align-items: center;justify-content: space-around; padding-right: 20px">
+          <ion-img style="width: 80px; box-shadow: #989aa2" alt="Logo" src="./assets/LogoSinFondo.png"></ion-img>
+        </div>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list>
+        <ion-item style="text-space: 10px">
+          <ion-icon name="person-circle-sharp" style="padding-right: 10px"></ion-icon>
+          Perfil de usuario
+        </ion-item>
+        <ion-item>
+          <ion-icon name="tennisball-sharp" style="padding-right: 10px"></ion-icon>
+          Clases de Tennis
+        </ion-item>
+        <ion-item>
+          <ion-icon name="call-sharp" style="padding-right: 10px"></ion-icon>
+          Contactanos
+        </ion-item>
+      </ion-list>
+      <ion-card>
+        <img src="./assets/user.png" alt="Avatar" style="alignment: center; width:auto">
+        <div class="container" style="text-align: center">
+          <h4><b>Josue Alvarez</b></h4>
+          <p>Membresia</p>
+        </div>
+      </ion-card>
+    </ion-content>
+    <ion-button color="favorite" (click)="logout()">LOGOUT
+      <ion-icon slot="icon-only" name="log-out"></ion-icon>
+    </ion-button>
+  </ion-menu>
+
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar class="container">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <div style="display: flex; align-items: center;justify-content: space-around; padding-right: 50px">
+          <ion-img style="width: 80px" alt="Logo" src="./assets/LogoSinFondo.png"></ion-img>
+        </div>
+      </ion-toolbar>
+    </ion-header>
+
+
+    <ion-router-outlet></ion-router-outlet>
+  </div>
 </ion-app>

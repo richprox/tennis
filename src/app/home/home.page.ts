@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+
+
 
 import { AlertController, LoadingController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
@@ -7,27 +8,22 @@ import { AvatarService } from '../services/avatar.service';
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit{
   profile = null;
+
+  startDate = new Date(1990, 0, 1);
 
   constructor(
     private avatarService: AvatarService,
     private authService: AuthService,
-    private router: Router,
     private loadingController: LoadingController,
     private alertController: AlertController
   ) {}
-    // this.avatarService.getUserProfile().subscribe((data) => {
-    //   this.profile = data;
-  async logout() {
-    await this.authService.logout();
-    this.router.navigateByUrl('/', { replaceUrl: true });
+
+  ngOnInit() {
   }
 
-  async changeImage() {
-
-    }
 }

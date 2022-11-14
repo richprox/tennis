@@ -28,17 +28,28 @@
                 "glob": "**/*.svg",
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
-              }
+              },
+              "src/manifest.webmanifest"
             ],
             "styles": ["src/theme/variables.scss", "src/global.scss"],
-            "scripts": [],
+            "scripts": [
+              "src/assets/vendors/js/vendor.bundle.base.js",
+              "src/assets/vendors/chartjs/Chart.min.js",
+              "src/assets/vendors/jvectormap/jquery-jvectormap.min.js",
+              "src/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js",
+              "src/assets/js/material.js",
+              "src/assets/js/misc.js",
+              "src/assets/js/dashboard.js"
+              ],
             "aot": false,
             "vendorChunk": true,
             "extractLicenses": false,
             "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -108,7 +119,8 @@
                 "glob": "**/*",
                 "input": "src/assets",
                 "output": "/assets"
-              }
+              },
+              "src/manifest.webmanifest"
             ]
           },
           "configurations": {

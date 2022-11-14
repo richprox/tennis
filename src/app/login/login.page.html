@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>GOSA Racket Club</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-card >
+          <ion-card-content></ion-card-content>
+          <ion-card-content>
+            <form [formGroup]="credentials" (ngSubmit)="login()">
+              <ion-item fill="solid" class="ion-margin-bottom">
+                <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+                <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email is invalid</ion-note>
+              </ion-item>
+              <ion-item fill="solid" class="ion-margin-bottom">
+                <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+                <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Password needs to be 6 characters</ion-note>
+              </ion-item>
+              <ion-button color="favorite" expand="full" type="submit" [disabled]="!credentials.valid">Login</ion-button>
+              <ion-button color="favorite" expand="full" type="button" (click)="register()">Registrate</ion-button>
+            </form>
+          </ion-card-content>
+          <ion-card-content>
+            <div style="display: flex; align-items: center;justify-content: center;">
+              <ion-img style="width: 180px"  alt="Logo" src="./assets/LogoSinFondo.png"></ion-img>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+</ion-content>

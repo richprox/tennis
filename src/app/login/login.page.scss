@@ -1,0 +1,45 @@
+ion-toolbar {
+  --background: #a24bc4;
+  --color: white;
+  --min-height: 60px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+}
+
+#container {
+  text-align: center;
+  background-color: #3a7be0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  margin: 0 auto;
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #a21e1e;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-content {
+  --background: none;
+  background-image: url('/assets/fondo.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -5,6 +5,7 @@ import { HomePage } from './home.page';
 
 
 
+
 const routes: Routes = [
   {
     path: 'tabs',
@@ -25,6 +26,15 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () => import('../tennis/membresias/membresias.module').then(m => m.MembresiasPageModule)
+          }
+        ]
+      },
+      {
+        path: 'booking',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../bookings/bookings.module').then(m => m.BookingsPageModule)
           }
         ]
       },

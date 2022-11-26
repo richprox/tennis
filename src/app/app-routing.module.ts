@@ -21,10 +21,10 @@ const routes: Routes = [
       import('./home/home.module').then( m => m.HomePageModule),
     ...canActivate(redirectUnauthorizedToLogin)
   },
-  // {
-  //   path: 'tennis',
-  //   loadChildren: () => import('./tennis/tennis.module').then( m => m.TennisPageModule)
-  // },
+  {
+    path: 'tennis',
+    loadChildren: () => import('./tennis/tennis.module').then( m => m.TennisPageModule)
+  },
   {
     path: 'bookings',
     loadChildren: () => import('./bookings/bookings.module').then(m => m.BookingsPageModule)

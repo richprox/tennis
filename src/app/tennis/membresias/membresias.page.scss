@@ -49,6 +49,16 @@ ion-card{
   --font-size: 30px;
 }
 
+.header {
+  margin-top: 25px;
+  background-image: url(../../../assets/instalaciones6.jpg);
+  padding: 5px;
+  text-align: center;
+  background-image: linear-gradient(to right, #991aa7 80% 3%, #2ad58e 95% 100%);
+  color: white;
+  font-size: 30px;
+}
+
 
 
 .fullscreen-bg {
@@ -289,6 +299,7 @@ span{
   float: left;
   width: 25%;
   padding: 8px;
+
 }
 
 /* Style the list */
@@ -307,7 +318,7 @@ span{
 }
 
 /* Pricing header */
-.price .header {
+.price .headers {
   background-color: #512363;
   color: white;
   font-size: 25px;
@@ -328,18 +339,19 @@ span{
 
 /* The "Sign Up" button */
 .buttons {
-  background-color: #e4c866;
+  background-color: #ae1585;
   border: none;
-  color: #390737;
+  color: #fff8ff;
   padding: 10px 25px;
   text-align: center;
+  border-radius: 10px;
   text-decoration: none;
   font-size: 18px;
 }
 
 /* Change the width of the three columns to 100%
 (to stack horizontally on small screens) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 875px) {
   .columns {
     width: 100%;
   }

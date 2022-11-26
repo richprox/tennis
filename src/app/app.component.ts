@@ -14,6 +14,10 @@ export class AppComponent {
     private router: Router
   ) {}
 
+  get userIsAuthenticated() {
+    return this.userIsAuthenticated;
+  }
+
   async logout() {
     await this.authService.logout();
     this.router.navigateByUrl('/', { replaceUrl: true });

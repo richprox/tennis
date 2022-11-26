@@ -1,6 +1,6 @@
 <ion-app>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
   <ion-menu contentId="main-content">
     <ion-header>
@@ -12,18 +12,24 @@
     </ion-header>
     <ion-content class="ion-padding">
       <ion-list>
-        <ion-item style="text-space: 10px">
-          <ion-icon name="person-circle-sharp" style="padding-right: 10px"></ion-icon>
-          Perfil de usuario
-        </ion-item>
-        <ion-item>
-          <ion-icon name="tennisball-sharp" style="padding-right: 10px"></ion-icon>
-          Clases de Tennis
-        </ion-item>
-        <ion-item>
-          <ion-icon name="call-sharp" style="padding-right: 10px"></ion-icon>
-          Contactanos
-        </ion-item>
+        <ion-menu-toggle>
+          <ion-item style="text-space: 10px" [routerLink]="['./users']">
+            <ion-icon name="person-circle-sharp" style="padding-right: 10px" ></ion-icon>
+            Perfil de usuario
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item style="text-space: 10px" [routerLink]="['./tennis']">
+            <ion-icon name="tennisball-sharp" style="padding-right: 10px"></ion-icon>
+            Clases de Tennis
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item>
+            <ion-icon name="call-sharp" style="padding-right: 10px"></ion-icon>
+            Contactanos
+          </ion-item>
+        </ion-menu-toggle>
       </ion-list>
       <ion-card>
         <img src="./assets/user.png" alt="Avatar" style="alignment: center; width:auto">
@@ -33,9 +39,11 @@
         </div>
       </ion-card>
     </ion-content>
-    <ion-button color="favorite" (click)="logout()">LOGOUT
-      <ion-icon slot="icon-only" name="log-out"></ion-icon>
-    </ion-button>
+
+      <ion-button color="favorite" (click)="logout()">LOGOUT
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+
   </ion-menu>
 
 
@@ -50,7 +58,6 @@
         </div>
       </ion-toolbar>
     </ion-header>
-
 
     <ion-router-outlet></ion-router-outlet>
   </div>

@@ -5,5 +5,43 @@
 </ion-header>
 
 <ion-content>
+  <ion-col size="6" offset="2">
+
+      <div class="cards">
+        <div class="banner">
+          <img src="../../assets/user1.png"/>
+        </div>
+        <div class="menu">
+          <div class="opener"><span></span><span></span><span></span></div>
+        </div>
+        <h2 class="name">Josue Alvarez</h2>
+        
+        <div class="title">Membresia: Individual</div>
+        <div class="actions">
+          <div class="follow-info">
+            <h2><span>Fecha de Alta:</span><small>01/02/2021</small></h2>
+            <h2><a><span>Correo Electronico</span><small>Following</small></a></h2>
+          </div>
+          <div class="follow-btn">
+            <button>Actualizar Membresia</button>
+          </div>
+        </div>
+        <div class="desc"></div>
+      </div>
+  </ion-col>
+
+
+
 
 </ion-content>
+
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button [routerLink]="['../home']" >
+      <ion-label>GOSA</ion-label>
+      <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+

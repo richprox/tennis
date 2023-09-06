@@ -3,9 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomePage } from './home.page';
 
-
-
-
 const routes: Routes = [
   {
     path: 'tabs',
@@ -44,9 +41,47 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () => import('../admin/admin.module').then(m => m.AdminPageModule)
+          },
+          {
+            path: 'tennis-courts',
+            loadChildren: () => import('../admin/tennis-courts/tennis-courts.module').then(m => m.TennisCourtsModule)
+          },
+          {
+            path: 'dashboard',
+            loadChildren: () => import('../admin/dashboard/dashboard.module').then(m => m.DashboardPageModule)
           }
         ]
       },
+
+  //     {
+  //       path: 'adminGosa',
+  //       children:[
+  //         {
+  //           path: 'account',
+  //           loadChildren: () => import('../adminGosa/pages/account/account.module').then(m => m.AccountModule)
+  //         },
+  // {
+  //   path: 'support',
+  //   loadChildren: () => import('../adminGosa/pages/support/support.module').then(m => m.SupportModule)
+  // },
+  // {
+  //   path: 'login',
+  //   loadChildren: () => import('../adminGosa/pages/login/login.module').then(m => m.LoginModule)
+  // },
+  // {
+  //   path: 'signup',
+  //   loadChildren: () => import('../adminGosa/pages/signup/signup.module').then(m => m.SignUpModule)
+  // },
+  // {
+  //   path: 'app',
+  //   loadChildren: () => import('../adminGosa/pages/tabs-page/tabs-page.module').then(m => m.TabsModule)
+  // },
+  // {
+  //   path: 'tutorial',
+  //   loadChildren: () => import('../adminGosa/pages/tutorial/tutorial.module').then(m => m.TutorialModule)
+  //         },
+  //       ]
+  //     },
       {
         path: '',
         redirectTo: '/home/tabs/inicio',

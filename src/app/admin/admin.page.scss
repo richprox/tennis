@@ -23164,11 +23164,13 @@
 /*}*/
 
 /*!*# sourceMappingURL=../maps/demo/style.css.map *!*/
-ion-content {
-  --ion-background-color: #f3f4f6;
+// Estilo para el encabezado
+ion-header {
+  --ion-background-color: #8c0e88; // Cambia el color de fondo del encabezado
+  --ion-text-color: white; // Cambia el color del texto del encabezado
 }
 
-ion-list ion-item {
-  font-size: 18px;
-  border-bottom: 1px solid #d1d1d1;
+.custom-header {
+  --ion-background: linear-gradient(to right, purple, darkblue); /* Degradado de purpura a morado */
+  --ion-text-color: white; /* Color de texto blanco */
 }

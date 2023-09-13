@@ -39,10 +39,16 @@ export class AuthService {
       const userFirebase = userCredential.user;
       await this.firestore.collection('users').doc(userFirebase.uid).set({
         displayName: user.name,
+        displayLastName: user.lastName,
+        displayLastName2: user.lastName2,
         email: user.email,
         age: user.age,
         address: user.address,
-        role: user.role || 'cliente'
+        role: user.role || 'cliente',
+        phone: user.phone,
+        fechaNacimiento: user.fechaNacimiento,
+        codigoPostal: user.codigoPostal,
+        registro: user.registro
       });
 
       return { success: true };
@@ -108,7 +114,6 @@ export class AuthService {
   getUsers(): Observable<any[]> {
     return this.firestore.collection('users').valueChanges();
   }
-
 
   getCurrentUsers(): Promise<User | null> {
     return new Promise((resolve, reject) => {
